@@ -1,5 +1,5 @@
 
-# UNO-MULTIPLAYER-ONLINE 
+# UNO-MULTIPLAYER-ONLINE (8BIT THEME)
 
 My first serious web development project. It is a two players clicked-based online game that uses WebSockets protocol, for full duplex communication between the client and the server. This is an online version of the game called ’UNO’.
 ## Run Locally
