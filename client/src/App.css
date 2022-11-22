@@ -1,0 +1,380 @@
+.App {
+  text-align: center;
+}
+
+a {
+  color: #ffffff;
+}
+
+/* Homepage */
+.Homepage {
+  background-image: url('./assets/Landing-Page.gif');
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+
+.homepage-menu {
+  top: 120px;
+}
+
+.homepage-form {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-form>h1 {
+  margin: 0 30px;
+}
+
+.homepage-join {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-join>input {
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 15px;
+  width: 150px;
+  line-height: 1.5em;
+}
+
+/* Game.js parent div */
+.Game {
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Game.js Background */
+.backgroundColorR {
+  background-image: url('./assets/backgrounds/bgR.png');
+}
+
+.backgroundColorG {
+  background-image: url('./assets/backgrounds/bgG.png');
+}
+
+.backgroundColorB {
+  background-image: url('./assets/backgrounds/bgB.png');
+}
+
+.backgroundColorY {
+  background-image: url('./assets/backgrounds/bgY.png');
+}
+
+/* UNO Cards */
+.Card {
+  width: 6rem;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Game.js Top Row */
+.topInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 100px;
+}
+
+.topInfo>img {
+  width: 7%;
+  margin: 0;
+  padding: 0;
+}
+
+.topInfo>h1 {
+  letter-spacing: 3px;
+  font-family: 'VT323';
+  margin-top: 10px;
+  font-size: 2rem;
+  padding-top: 2%;
+
+}
+
+.topInfoText {
+  font-family: 'VT323';
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Player Decks */
+.player1Deck {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.player1Deck>img {
+  transition: transform 350ms;
+}
+
+.player1Deck>img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.player2Deck {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.player2Deck>img {
+  transition: transform 350ms;
+}
+
+.player2Deck>img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.playerDeckText {
+  font-family: 'VT323', monospace;
+  font-size: 3rem;
+  margin: 0 20px;
+}
+
+/* Game.js Middle Row */
+.middleInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.middleInfo>button {
+  align-self: center;
+}
+
+/* Game Buttons */
+.game-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: x-large;
+  letter-spacing: 2px;
+  font-family: 'VT323', monospace;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: black;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.game-button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.game-button:active {
+  color: #000
+}
+
+.game-button:active:after {
+  background: transparent;
+}
+
+.game-button:hover:before {
+  opacity: 1;
+}
+
+.game-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Spinner */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #ffffff;
+  font-size: 5px;
+  margin: 0 50px 0 50px;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+/* Chat Box */
+.chat-box{
+	position: absolute;
+	bottom: 0px;
+	background: white;
+	width: 355px;
+	border-radius: 5px 5px 0px 0px;
+  z-index: 100;
+}
+.chat-box-player1{
+  right: 20px;
+}
+.chat-box-player2{
+  left: 20px;
+}
+.chat-head{
+  font-family: 'VT323', monospace;
+  font-size: x-large;
+	width: inherit;
+	height: 45px;
+	background: #2c3e50;
+	border-radius: 5px 5px 0px 0px;
+}
+.chat-head h2{
+	color: white;
+	padding-top: 5px;
+	display: inline-block;
+}
+.chat-head span{
+	cursor: pointer;
+	float: right;
+	width: 25px;
+	margin: 10px;
+}
+.chat-body{
+  display: none;
+	height: 205px;
+	width: inherit;
+	overflow: hidden auto;
+	margin-bottom: 45px;
+}
+.chat-text{
+	position: fixed;
+	bottom: 0px;
+	height: 45px;
+	width: inherit;
+}
+.chat-text input{
+	width: inherit;
+	height: inherit; 
+	box-sizing: border-box;
+	border: 1px solid #bdc3c7;
+	padding: 10px;
+	resize: none;
+  outline: none;
+}
+.chat-text input:active, .chat-text input:focus, .chat-text input:hover{
+	border-color: royalblue;
+}
+.msg-send{
+  font-family: 'VT323', monospace;
+  font-size: xx-large;
+	background: #406a4b;
+}
+.msg-receive{
+	background: #595080;
+}
+.msg-send, .msg-receive{
+	width: 285px;
+	height: 35px;
+	padding: 5px 5px 5px 10px;
+	margin: 5px auto;
+	border-radius: 3px;
+	line-height: 30px;
+	position: relative;
+	color: white;
+}
+.msg-receive:before{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border: 15px solid;
+	border-color: transparent #595080 transparent transparent;
+	left: -29px;
+	top: 7px;
+}
+.msg-send:after{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border: 15px solid;
+	border-color: transparent transparent transparent #406a4b;
+	right: -29px;
+	top: 7px;
+}
+.msg-receive:hover, .msg-send:hover{
+	opacity: .9;
+}
