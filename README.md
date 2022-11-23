@@ -59,4 +59,4 @@ Head over to http://localhost:3000/ and enjoy the game! 🎉
 ![game play](https://user-images.githubusercontent.com/91761444/203336475-e06dde37-8909-40c3-b7fc-8886869ef729.png)
 
 # Inspiration
- Mizanxali
+[ Mizanxali](https://github.com/mizanxali)
