@@ -12,52 +12,46 @@ This two-player online version of the game was built with [React](https://reactj
 2. To host a new game, click on CREATE GAME. A game code will be generated which you can share with your friend.
 3. To join a friend's game, enter the game code given by them, and click on JOIN GAME.
 4. That's it! Enjoy the game and remember, no toxicity!
-## Run Locally
 
-#### ON SERVER SIDE:
+**For Running:**
 
-Clone the project
+### ⏳ Installation
 
-```bash
-  git clone https://github.com/kevinfranklin03/uno-multiplayer-online
-```
-
-Go to the project directory
+- At the root of the project directory, use npm to install the server-side dependencies
 
 ```bash
-  cd uno-multiplayer-online
+npm install
 ```
 
-Install dependencies
+This command installs all the server-side dependencies needed for the game to run locally.
+
+- Use npm to run server
 
 ```bash
-  npm install
+npm start
 ```
 
-Start the server
+This command gets the server running on localhost port 5000.
+
+- In a separate terminal, navigate into the client folder and use npm to install the client-side dependencies
 
 ```bash
-  npm run start
+cd client
+npm install
 ```
 
-#### ON CLIENT SIDE:
+This command installs all the client-side dependencies needed for the game to run locally.
+
+- Finally, use npm to run client
 
 ```bash
-  cd client
+npm start
 ```
 
+This command gets the client running on localhost port 3000.
 
-Install dependencies
+Head over to http://localhost:3000/ and enjoy the game! 🎉
 
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
 ## Screenshots
 
 ![lobby](https://user-images.githubusercontent.com/91761444/203335915-1f6d20ee-b2f1-4fd3-bda6-aede18a93d67.png)
