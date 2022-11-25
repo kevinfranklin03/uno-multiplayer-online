@@ -332,18 +332,20 @@ a {
 	border: 1px solid #bdc3c7;
 	padding: 10px;
 	resize: none;
-  outline: none;
+  	outline: none;
 }
 .chat-text input:active, .chat-text input:focus, .chat-text input:hover{
 	border-color: royalblue;
 }
 .msg-send{
-  font-family: 'VT323', monospace;
-  font-size: xx-large;
+  	font-family: 'VT323', monospace;
+  	font-size: x-large;
 	background: #406a4b;
 }
 .msg-receive{
+  	font-family: 'VT323', monospace;
 	background: #595080;
+  	font-size: xx-large;
 }
 .msg-send, .msg-receive{
 	width: 285px;
